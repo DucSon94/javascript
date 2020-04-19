@@ -8,4 +8,5 @@ updateAvatar('facebook.com', (a) => {
         console.log(a);
     })
     // test :D aa
+    //fsffs
 setTimeout('aaa', 3000)
