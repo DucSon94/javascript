@@ -5,8 +5,7 @@ function updateAvatar(url, onSuccess) {
 }
 
 updateAvatar('facebook.com', (a) => {
-        console.log(a);
-    })
-    //test git
+    console.log(a);
+})
 
 setTimeout('aaa', 3000)
