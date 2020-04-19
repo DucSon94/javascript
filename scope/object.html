@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user = {
+            userName: 'Mr Bean',
+            gender: 'Male',
+            age: 21,
+            showInfo: function() {
+                console.log('userName: ' + this.userName + '\t gender: ' + this.gender + '\t age: ' + this.age)
+            },
+            location: {
+                streetNumber: '1 Ba Trieu'
+            }
+        }
+
+        var view = function(u) {
+            console.log('Gender: ' + u.gender + '\n age: ' + u.age)
+        }
+        view.name = 'Son';
+        console.log(view.name)
+        view(user)
+
+        var ten = 'aa'
+        var user = {
+
+            uSername: ten,
+            show: function() {
+                console.log(this.uSername);
+            }
+        }
+        user.show();
+    </script>
+</body>
+
+</html>

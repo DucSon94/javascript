@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        bar();
+        var an = 2;
+
+        function foo() {
+            console.log(an); // 3  (not 2!)
+        }
+
+        function bar() {
+            var an = 3;
+            foo();
+        }
+    </script>
+</body>
+
+</html>

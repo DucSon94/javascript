@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var user2 = {
+            first: 'Khoa',
+            two: 'Nguyen',
+
+            show: function() {
+                debugger;
+
+                console.log('first: ' + this.first + '\t two: ' + this.two);
+
+                function showName() {
+                    debugger;
+                    console.log('first: ' + this.first + '\t two: ' + this.two);
+
+                }
+                showName();
+            }
+
+
+        }
+
+        user2.show()
+
+        var a = 2;
+
+        (function IIFE(def) {
+            def(window);
+        })(function def(global) {
+
+            var a = 3;
+            console.log(a); // 3
+            console.log(global.a); // 2
+
+        });
+
+
+        function say() {
+            var hello2 = 'hello2';
+            console.log('hello');
+        }
+        var hello = 'hello';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var firstName = 'KA';
+        var age = 20;
+        var user = {
+
+            firstName: 'Son',
+            age: 12,
+
+            show1: function print() {
+                debugger;
+                console.log('firstName: ' + this.firstName + '\t age: ' + this.age)
+
+                var firstName = 'Thang';
+                var age = 15;
+
+                function show() {
+                    debugger;
+                    console.log('show');
+                    console.log('firstName: ' + this.firstName + '\t age: ' + this.age);
+
+                    function display() {
+                        debugger;
+                        console.log('firstName: ' + this.firstName + '\t age: ' + this.age)
+                    }
+                    display.call(this)
+                }
+
+                show.call(this)
+            },
+            info: function Info() {
+                debugger;
+                console.log('firstName: ' + firstName + '\t age: ' + age)
+            },
+
+        }
+
+        user.show1();
+        user.info();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <li class="click">link 1 </li>
+    <li class="click">link 2 </li>
+    <li class="click">link 3 </li>
+    <li class="click">link 4 </li>
+    <li class="click">link 5 </li>
+    <script>
+        var add_the_handlers = function(nodes) {
+            var i;
+            for (i = 0; i < nodes.length; i += 1) {
+                nodes[i].onclick = function(e) {
+                    alert(i);
+                };
+            }
+        };
+        var nodes = document.getElementsByClassName("click");
+        add_the_handlers(nodes);
+    </script>
+
+</body>
+
+</html>
