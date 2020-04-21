@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var firstName = 'Chien';
+        //var lastName = 'Thang';
+        var son = {
+            firstName: 'Nguyen',
+            lastName: 'Son',
+            showName: function() {
+                console.log('firstName: ' + this.firstName + ' lastName: ' + this.lastName);
+            }
+
+        }
+
+        function displayName() {
+            console.log('firsName: ' + this.firstName + ' lastName: ' + this.lastName);
+            return true;
+        }
+
+        var sayInfo = displayName.bind(son)();
+        console.log(sayInfo)
+
+        var a = 'bb'
+
+        function read() {
+            var a = 'aa'
+            write();
+        }
+
+        function write() {
+            console.log(a);
+        }
+        read();
+    </script>
+</body>
+
+</html>
