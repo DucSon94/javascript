@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+            }
+            showName() {
+                console.log('firstName: ' + this.firstName);
+            }
+
+        }
+
+        class PerSon extends User {
+            constructor(firstName, lastName, id) {
+                super(firstName, lastName)
+                this.id = id;
+            }
+            showIf() {
+                console.log(this.id)
+            }
+        };
+        var p1 = new PerSon('son', 'duc', 5);
+        p1.showName();
+
+
+        var Son = new User('Nguyen', 'Duc');
+        var person = new User('Tien');
+        console.log(person.firstName)
+        console.log(Son.firstName)
+    </script>
+</body>
+
+</html>

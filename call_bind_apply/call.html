@@ -9,20 +9,35 @@
 
 <body>
     <script>
-        //var firstName = 'Chien';
+        var firstName = 'Chien';
         //var lastName = 'Thang';
+
         var son = {
             firstName: 'Nguyen',
             lastName: 'Son',
             showName: function() {
                 console.log('firstName: ' + this.firstName + ' lastName: ' + this.lastName);
+            },
+
+            returnName: function() {
+                return this.firstName;
             }
 
         }
 
+        var name2 = son.returnName;
+
+        name2.call(son);
+        console.log(name2.call(son))
+
         function displayName() {
             console.log('firsName: ' + this.firstName + ' lastName: ' + this.lastName);
             return true;
+        }
+
+        function returnName(name) {
+
+            return name;
         }
 
         var sayInfo = displayName.bind(son)();
