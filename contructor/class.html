@@ -31,10 +31,19 @@
             }
         };
         var p1 = new PerSon('son', 'duc', 5);
+        var p2 = new PerSon('viet', 'duc', 5);
+        p2.hello = function() {
+            console.log("hello");
+        }
+        p1.name = "minu";
         p1.showName();
 
-
+        User.say = function() {
+            console.log("hello")
+        }
         var Son = new User('Nguyen', 'Duc');
+
+
         var person = new User('Tien');
         console.log(person.firstName)
         console.log(Son.firstName)

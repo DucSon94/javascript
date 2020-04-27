@@ -24,6 +24,21 @@
 
         }
 
+        Dog.prototype.tall = "50";
+
+        var dog1 = new Dog();
+        //dog1.hi();
+
+        var dog2 = new Dog();
+        dog2.__proto__.hi = function() {
+            console.log("day la method hi của hàm khởi tạo function Dog")
+        }
+        dog2.hi();
+        dog1.hi();
+        dog1.name = "minu";
+        dog1.say = function() {
+            console.log("hello")
+        };
 
         var khoa = new User('Khoa', 'Nguyen')
 

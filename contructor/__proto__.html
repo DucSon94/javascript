@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        user = {
+            firstName: "son",
+            lastName: "Duc",
+            showName: function() {
+                console.log("firstName name: " + this.firstName + "  last name: " + this.lastName)
+            }
+
+        }
+
+        khoa = {
+            firstName: "khoa",
+            lastName: "nguyen",
+        }
+
+        linh = {
+            firstName: "linh"
+        }
+
+        khoa.__proto__ = user;
+        linh.__proto__ = khoa;
+
+        function Dog() {
+
+        }
+        var dog = new Dog();
+
+        dog.__proto__ = user;
+        dog.__proto__.color = "red";
+
+
+        var dog2 = new Dog();
+
+        class Cat {
+
+        }
+        var cat = new Cat();
+    </script>
+</body>
+
+</html>
