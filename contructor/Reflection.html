@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        user = {
+            firstName: "son",
+            lastName: "Duc",
+            showName: function() {
+                console.log("firstName name: " + this.firstName + "  last name: " + this.lastName)
+            }
+
+        }
+
+
+        function Dog() {}
+        var dog = new Dog();
+        //dog.__proto__.color = "red";
+        dog.__proto__ = user;
+
+        var dog2 = new Dog();
+
+        function Cat() {}
+        Cat.prototype.tall = 50;
+        var cat = new Cat();
+
+        khoa = {
+                firstName: "Khoa",
+                lastName: "Nguyen"
+            }
+            //khoa.__proto__.hair = "thin";
+
+        // console.log(Reflect.has(khoa, 'firstName'))
+        // Reflect.setPrototypeOf(khoa, user);
+        // khoa.showName();
+    </script>
+</body>
+
+</html>

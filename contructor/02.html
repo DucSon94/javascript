@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function User(first, last) {
+            this.firstname = first,
+                this.lastname = last,
+                this.showName = function() {
+                    console.log(this.firstname + ' ' + this.lastname)
+                }
+                //return {name:'abc'};
+        }
+
+        // User.prototype.yourFeature 
+
+        function Dog() {
+
+        }
+
+        Dog.prototype.tall = "50";
+
+        var dog1 = new Dog();
+        //dog1.hi();
+
+        var dog2 = new Dog();
+        dog2.__proto__.hi = function() {
+            console.log("day la method hi của hàm khởi tạo function Dog")
+        }
+        dog2.hi();
+        dog1.hi();
+        dog1.name = "minu";
+        dog1.say = function() {
+            console.log("hello")
+        };
+
+        var khoa = new User('Khoa', 'Nguyen')
+
+        var user2 = new User('user2', 'user2')
+
+
+        // User.prototype.featureNAme = 
+        // khoa.__proto__ = 
+
+        User.prototype.showVietnamese = function() {
+            console.log('Ten cua toi la ' + this.firstname + ' ' + this.lastname)
+        }
+
+        User.prototype.setAge = function(age) {
+            this.age = age;
+        }
+
+        User.prototype.showFullName = function() {
+            console.log(this.firstname + ' ' + this.lastname)
+        }
+
+        var khoa = new User('Khoa', 'Nguyen')
+        khoa.setAge(23);
+
+
+        var user2 = new User('user2', 'user2')
+        user2.setAge(25)
+        var son = Object.create(khoa)
+        Dog.prototype = Object.create(khoa);
+        var dog3 = new Dog()
+    </script>
+</body>
+
+</html>

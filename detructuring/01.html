@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            firstName: "son",
+            lastName: "duc",
+            age: 5
+        }
+
+        const {
+            lastName,
+            age,
+            firstName
+        } = user;
+
+        // đổi tên cho biến trong detructuring
+
+        const {
+            firstName: first,
+            lastName: last,
+            age: ag
+        } = user;
+
+        let dog = {
+            name: "minu",
+            age: 6,
+            address: {
+                number: '1/1',
+                street: "hai ba trung"
+            }
+        }
+
+        const {
+            name,
+            age
+        } = dog
+        const {
+            number,
+            street
+        } = dog.address;
+        // hoặc có thể viết như này
+        const {
+            address
+        } = dog;
+        const {
+            number,
+            street
+        } = address;
+
+        // ví dụ detructurign array
+
+        let name = ['anh', 'tien', 'hung']
+        const [first, two, three] = name;
+    </script>
+</body>
+
+</html>

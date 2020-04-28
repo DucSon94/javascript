@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var hi = function() {
+            console.log("hello") // hàm viết bình thường
+        }
+
+
+
+        var hello = name => {
+            console.log(name); // cách viết vs 1 tham số 
+        }
+
+        var showInfo = info => console.log("ìno") // cách viết vs 1 tham số và có 1 dòng nếu nhiều hơn 1 tham số hoặc 1 dòng thì phải viết trong ngoặc
+
+        var hi = (name, age) => {
+            console.log("name: " + name + " age: " + age)
+        }
+
+        var number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        number.forEach(e => console.log(e))
+    </script>
+</body>
+
+</html>
